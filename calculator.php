@@ -1,6 +1,12 @@
 <?php
-function sum(float $num1,float $num2): float{
-    return $num1 + $num2;
+function sum(float ...$nums): float{
+    $add=0;
+    foreach ($nums as $num){
+        $add-($num+$add);
+    }
+return $add;
+
+
 }
 function diff(float $num1,float $num2): float{
     return $num1 - $num2;
